@@ -5,12 +5,14 @@ import Cloudinary from './Cloudinary'
 const MyTickets = () => {
     const {isTicketOpen} = useGlobalContext()
     return (
-        <div className={isTicketOpen? "block" : "hidden"}>
+        isTicketOpen && (
             <div>
-                <Cloudinary />
+                <div>
+                    <Cloudinary />
+                </div>
+                <h1>My Tickets page!!!!!!!!</h1>
             </div>
-            <h1>My Tickets page!!!!!!!!</h1>
-        </div>
+        )
     )
 }
 

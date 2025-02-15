@@ -46,44 +46,46 @@ const EventSection = () => {
         
     };
     return (
-        <div className={isEventSectionOpen? "block" : "hidden"}>
-            <CloudinaryAssist />
-            <div className="p-4 max-w-md mx-auto">
-                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                    <div>
-                        <label className="block">Email:</label>
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="border p-2 w-full"
-                        />
-                        {errors.email && <p className="text-red-500">{errors.email}</p>}
-                    </div>
+        isEventSectionOpen && (
+            <div>
+                <CloudinaryAssist />
+                <div className="p-4 max-w-md mx-auto">
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                        <div>
+                            <label className="block">Email:</label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                className="border p-2 w-full"
+                            />
+                            {errors.email && <p className="text-red-500">{errors.email}</p>}
+                        </div>
 
-                    <div>
-                        <label className="block">Password:</label>
-                        <input
-                            type="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleChange}
-                            className="border p-2 w-full"
-                        />
-                        {errors.password && <p className="text-red-500">{errors.password}</p>}
-                    </div>
+                        <div>
+                            <label className="block">Password:</label>
+                            <input
+                                type="password"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                className="border p-2 w-full"
+                            />
+                            {errors.password && <p className="text-red-500">{errors.password}</p>}
+                        </div>
 
-                    <button
-                        type="submit"
-                        className="bg-blue-500 text-white p-2"
-                        disabled={!isFormValid}
-                    >
-                        Submit
-                    </button>
-                </form>
+                        <button
+                            type="submit"
+                            className="bg-blue-500 text-white p-2"
+                            disabled={!isFormValid}
+                        >
+                            Submit
+                        </button>
+                    </form>
+                </div>
             </div>
-        </div>
+        )
     )
 }
 
