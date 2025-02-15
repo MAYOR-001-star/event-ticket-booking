@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useGlobalContext } from './Controllerr' // Make sure this path is correct
-import Cloudinary from './Cloudinary'
+import CloudinaryAssist from './CloudinaryAssist'
 
 const EventSection = () => {
     const {isEventSectionOpen} = useGlobalContext()
@@ -47,7 +47,7 @@ const EventSection = () => {
     };
     return (
         <div className={isEventSectionOpen? "block" : "hidden"}>
-            <Cloudinary />
+            <CloudinaryAssist />
             <div className="p-4 max-w-md mx-auto">
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <div>
