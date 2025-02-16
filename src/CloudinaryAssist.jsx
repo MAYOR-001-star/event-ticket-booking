@@ -20,8 +20,8 @@ function CloudinaryAssist() {
 
     return (
         <div>
-        <input type="file" accept="image/*" onChange={handleImageChange} />
-        {image && <img src={image} alt="Stored" width="200px" />}
+            <input type="file" accept="image/*" onChange={handleImageChange} />
+            {image && <img src={image} alt="Stored" width="200px" />}
         </div>
     );
 }

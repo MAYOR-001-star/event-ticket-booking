@@ -5,9 +5,22 @@ const Events = () => {
     const {isEventsOpen, openEventSection} = useGlobalContext()
     return (
         isEventsOpen && (
-            <div>
+            <div className='h-[100vh] border-[#197686] border-2' 
+                style={{color: 'white', margin: '4rem auto 0px', borderRadius: '2rem', maxWidth: '30rem'}}>
                 <div>
-                    <h2>Select your ticket</h2>
+                    <div className='flex justify-between items-center' style={{padding: '2.5rem 2.5rem 0.5rem 2.5rem'}}>
+                        <h1 className='font-normal' style={{fontWeight: '400'}}>Ticket Selection</h1>
+                        <p className='font-roboto' style={{fontFamily: 'Roboto', fontSize: '0.85rem'}}>Step 1/3</p>
+                    </div>
+                    <div className="progress-container" style={{maxWidth: '25rem', margin: '0 auto'}}>
+                        <div className="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+                {/* <div>
+                    <h2 className='text-red-500'>Select your ticket</h2>
                     <button>Regular Access</button>
                     <button>VIP Access</button>
                     <button>VVIP Access</button>
@@ -24,7 +37,7 @@ const Events = () => {
                 <div>
                     <button onClick={(e)=>e.preventDefault()}>cancel</button>
                     <button onClick={openEventSection}>next</button>
-                </div>
+                </div> */}
             </div>
         )
     )
