@@ -7,7 +7,7 @@ const Navbar = () => {
     const {openEvents, openAbout, openTicket} = useGlobalContext()
     return (
         <div>
-            <div className='border-[#197686] border-2 adjust w-[75rem] flex justify-between items-center mx-auto mt-4'>
+            <div className='border-[#197686] border-1 adjust w-[75rem] flex justify-between items-center mx-auto mt-4'>
                 <div>
                     <img src={logo} alt='company-logo'/>
                 </div>
