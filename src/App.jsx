@@ -7,7 +7,7 @@ import EventSection from './EventSection'
 
 const App = () => {
   return (
-    <div className='bg-custom w-full h-full'>
+    <div className='bg-custom'>
       <Navbar />
       <Events />
       <EventSection />
