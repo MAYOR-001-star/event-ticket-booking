@@ -75,13 +75,18 @@ const EventSection = () => {
                             {errors.password && <p className="text-red-500">{errors.password}</p>}
                         </div>
 
-                        <button
+                        <div className='flex justify-around items-center' style={{marginBottom: '1rem'}}>
+                        <button onClick={(e) => e.preventDefault()} className='btn-sub' 
+                            style={{ border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo'}}>
+                            Cancel
+                        </button>
+                        <button className='btn-sub' 
                             type="submit"
-                            className="bg-blue-500 text-white p-2"
                             disabled={!isFormValid}
-                        >
+                            style={{border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo', background: '#24A0B5', color: 'white'}}>
                             Submit
                         </button>
+                    </div>
                     </form>
                 </div>
             </div>
