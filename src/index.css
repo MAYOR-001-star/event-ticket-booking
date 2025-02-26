@@ -112,6 +112,7 @@
   background: #0E464F;
   position: absolute;
   height: 10rem;
+  /* z-index: -1; */
 }
 
 
@@ -119,8 +120,32 @@
   display: none;
 }
 
+.uploaded-image {
+  position: relative;
+  z-index: 10; 
+  margin-top: 1rem;
+}
 
 
 .opacityyy{
   background: rgba( 0, 0, 0,20%);
+}
+
+
+
+
+input {
+  background-color: transparent !important;
+  color: white !important; /* Ensures text is always white */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #0f172a inset !important; /* Match background color */
+  box-shadow: 0 0 0 1000px #0f172a inset !important;
+  background-color: transparent !important;
+  -webkit-text-fill-color: white !important; /* Forces white text */
+  color: white !important;
 }

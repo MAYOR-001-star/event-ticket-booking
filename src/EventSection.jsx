@@ -134,7 +134,7 @@ const EventSection = () => {
                                 className="btn-sub"
                                 style={{ border: "2.5px groove #197686", borderRadius: "0.8rem", fontFamily: "JejuMyeongjo" }}
                             >
-                                Cancel
+                                Back
                             </button>
                             <button
                                 className="btn-sub"
