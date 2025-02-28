@@ -36,7 +36,7 @@ function Cloudinary() {
 
     return (
         <div>
-            {imageUrl && <img src={imageUrl} alt="Uploaded" width="200px" style={{borderRadius: '8px', margin: '1rem 0'}} />}
+            {imageUrl && <img src={imageUrl} alt="Uploaded" width="150px" style={{borderRadius: '8px', margin: '1rem 0', border: '2px groove #24A0B5'}} />}
         </div>
     );
 }

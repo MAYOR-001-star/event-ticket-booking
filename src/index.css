@@ -162,13 +162,11 @@ input:-webkit-autofill:active {
 
 
 
-
-
-
-
-
-
-
-
+.container{
+  border-bottom: 1px solid #197686;
+  border-left: 1px solid #197686;
+  border-right: 1px solid #197686;
+  border-radius: 8px;
+}
 
 
