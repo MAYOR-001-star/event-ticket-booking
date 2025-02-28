@@ -66,6 +66,13 @@
   transition: width 0.5s ease-in-out;
 }
 
+.progress-bar2 {
+  width: 99.9%;
+  height: 100%;
+  background-color: #20b2aa;
+  transition: width 0.5s ease-in-out;
+}
+
 .center-text {
   text-align: center;
 }
@@ -124,14 +131,13 @@
   position: relative;
   z-index: 10; 
   margin-top: 1rem;
+  border-radius: 8px;
 }
 
 
 .opacityyy{
   background: rgba( 0, 0, 0,20%);
 }
-
-
 
 
 input {
@@ -149,3 +155,20 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: white !important; /* Forces white text */
   color: white !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

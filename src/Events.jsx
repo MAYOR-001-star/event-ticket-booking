@@ -82,7 +82,7 @@ const Events = () => {
                     </div>
 
                     <div className='flex justify-around items-center' style={{marginBottom: '1rem'}}>
-                        <button onClick={(e) => e.preventDefault()} className='btn-sub' 
+                        <button className='btn-sub' 
                             style={{ border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo'}}>
                             Cancel
                         </button>

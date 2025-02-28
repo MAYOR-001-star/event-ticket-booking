@@ -4,7 +4,7 @@ import CloudinaryAssist from "./CloudinaryAssist";
 import { FaEnvelope } from "react-icons/fa";
 
 const EventSection = () => {
-    const { openTicket, isEventSectionOpen } = useGlobalContext();
+    const { openTicket, isEventSectionOpen, openEvents } = useGlobalContext();
     const [formData, setFormData] = useState({ name: "", email: "", textarea: "" });
     const [errorMessage, setErrorMessage] = useState("");
 
@@ -30,7 +30,8 @@ const EventSection = () => {
 
     const handleCancel = () => {
         setFormData({ name: "", email: "", textarea: "" });
-        setErrorMessage(""); // Clear any error messages on cancel
+        setErrorMessage("");
+        openEvents()
     };
 
     return (
