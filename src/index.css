@@ -157,11 +157,6 @@ input:-webkit-autofill:active {
 }
 
 
-
-
-
-
-
 .container{
   border-bottom: 1px solid #197686;
   border-left: 1px solid #197686;
@@ -169,4 +164,38 @@ input:-webkit-autofill:active {
   border-radius: 8px;
 }
 
+.box { 
+  position: relative;
+  --mask:
+    radial-gradient(35px at 35px 35px,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -35px -35px,
+    linear-gradient(90deg,#000 2px,#0000 0) -1px 50% /100% calc(100% - 70px + 1px) repeat-x,
+    linear-gradient(      #000 2px,#0000 0) 50% -1px/calc(100% - 70px + 1px) 100% repeat-y;
+}
+.box:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #24A0B5;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+
+.box1 { 
+  position: relative;
+  --size: 35px; /* Define the variable */
+  --mask:
+    radial-gradient(var(--size) at var(--size) var(--size), #0000 calc(98% - 1px), #000 calc(100% - 1px) 98%, #0000) calc(-1 * var(--size)) calc(-1 * var(--size)),
+    linear-gradient(90deg, #000 2px, #0000 0) -1px 50% / 100% calc(100% - (2 * var(--size)) + 1px) repeat-x,
+    linear-gradient(#000 2px, #0000 0) 50% -1px / calc(100% - (2 * var(--size)) + 1px) 100% repeat-y;
+}
+
+.box1:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #24A0B5;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
 

@@ -23,7 +23,7 @@ const MyTickets = () => {
                     <h1 style={{marginBottom: '0.25rem', fontFamily: 'Roboto', fontWeight: '500'}}>Your Ticket is Booked!</h1>
                     <p style={{fontFamily: 'Roboto', fontWeight: '200'}}>Check your email for a copy or you can <span style={{fontWeight: '700', fontFamily: 'Roboto'}}>download</span></p>
                 </div>
-                <div className='border-[#197686] border-1 center-text' style={{borderRadius: '2rem', margin: '2rem 3.5rem', padding: '2rem'}}>
+                <div className='center-text box' style={{margin: '2rem 3.5rem 0', padding: '2rem'}}>
                     <div className='border-[#197686] border-1' style={{borderRadius: '1rem', marginBottom: '1rem', padding: '2rem'}}>
                         <div>
                             <h2 style={{fontFamily: 'Road Rage, serif', fontSize: '40px'}}>Techember Fest ”25</h2>
@@ -58,7 +58,7 @@ const MyTickets = () => {
                     </div>
                 </div>
                 
-                <div className='border-[#197686] border-1 center-text' style={{borderRadius: '2rem', margin: '0 3.5rem 2rem', padding: '2rem'}}>
+                <div className='center-text box1' style={{margin: '0 3.5rem 2rem', padding: '2rem'}}>
                         hello
                     </div>
                 <div className='flex justify-around items-center' style={{marginBottom: '1rem'}}>
