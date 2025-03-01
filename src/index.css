@@ -168,8 +168,8 @@ input:-webkit-autofill:active {
   position: relative;
   --mask:
     radial-gradient(35px at 35px 35px,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -35px -35px,
-    linear-gradient(90deg,#000 2px,#0000 0) -1px 50% /100% calc(100% - 70px + 1px) repeat-x,
-    linear-gradient(      #000 2px,#0000 0) 50% -1px/calc(100% - 70px + 1px) 100% repeat-y;
+    linear-gradient(90deg,#000 2px,#0000 0) -1px 50% /100% calc(101% - 70px + 1px) repeat-x,
+    linear-gradient(      #000 2px,#0000 0) 50% -1px/calc(100% - 70px + 1px) 101% repeat-y;
 }
 .box:before {
   content: "";
@@ -187,7 +187,7 @@ input:-webkit-autofill:active {
   --mask:
     radial-gradient(var(--size) at var(--size) var(--size), #0000 calc(98% - 1px), #000 calc(100% - 1px) 98%, #0000) calc(-1 * var(--size)) calc(-1 * var(--size)),
     linear-gradient(90deg, #000 2px, #0000 0) -1px 50% / 100% calc(100% - (2 * var(--size)) + 1px) repeat-x,
-    linear-gradient(#000 2px, #0000 0) 50% -1px / calc(100% - (2 * var(--size)) + 1px) 100% repeat-y;
+    linear-gradient(#000 2px, #0000 0) 50% 135px / calc(100% - (2 * var(--size)) + 1px) 100% repeat-y;
 }
 
 .box1:before {
@@ -199,3 +199,78 @@ input:-webkit-autofill:active {
           mask: var(--mask);
 }
 
+
+box2 { 
+  position: relative;
+  display: flex;
+  margin: 2px auto;
+  --size: 35px; 
+  --mask:
+    radial-gradient(var(--size) at var(--size) var(--size), #0000 calc(98% - 1px), #000 calc(100% - 1px) 98%, #0000) calc(-1 * var(--size)) calc(-1 * var(--size)),
+    linear-gradient(90deg, #000 2px, #0000 0) -1px 50% / 100% calc(100% - (2 * var(--size)) + 1px) repeat-x,
+    linear-gradient(#000 2px, #0000 0) 50% -1px / calc(100% - (2 * var(--size)) + 1px) 100% repeat-y;
+}
+
+.box2:before {
+  content: "";
+  inset: 0;
+  background: #24A0B5;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+
+.inner-box{
+  width: 0.9375rem;
+  height: 0.2375rem;
+  margin: 2px auto;
+  border: 1px solid #24A0B5;
+  border-radius: 8px;
+}
+
+
+/* HTML: <div class="stamp"></div> */
+/* HTML: <div class="curved-rectangle"></div> */
+/* HTML: <div class="inner-curve"></div> */
+.inner-curve {
+  --r: 30px;  /* control the rounded part */
+  --s: 40px;  /* control the size of the cut */
+  --a: 20deg; /* control the depth of the curvature */
+  --p: 50%;   /* control the position */
+
+  width: 60px;
+  aspect-ratio: 2/3;
+  background: transparent;
+  border-radius: var(--r);
+  --_m:,#000 calc(100% - 1px),#0000;
+  --_d:(var(--s) + var(--r))*cos(var(--a));
+  mask:
+    radial-gradient(var(--r) at var(--r) calc(var(--p) + var(--_d)) var(--_m)),
+    radial-gradient(var(--r) at var(--r) calc(var(--p) - var(--_d)) var(--_m)),
+    radial-gradient(var(--s) at calc(-1*sin(var(--a))*var(--s)) var(--p),
+      #0000 100%,#000 calc(100% + 1px)) calc(var(--r)*(1 - sin(var(--a)))) 0 no-repeat,
+    linear-gradient(#000 calc(var(--p) - var(--_d)),#0000 0 calc(var(--p) + var(--_d)),#000 0);
+}
+
+
+/* HTML: <div class="inner-curve"></div> */
+.inner-curve1 {
+  --r: 30px;  /* control the rounded part */
+  --s: 40px;  /* control the size of the cut */
+  --a: 20deg; /* control the depth of the curvature */
+  --p: 50%;   /* control the position */
+
+  width: 60px;
+  aspect-ratio: 2/3;
+  background: transparent;
+  border-radius: var(--r);
+  --_m:,#000 calc(100% - 1px),#0000;
+  --_r:var(--r) at calc(100% - var(--r));
+  --_d:(var(--s) + var(--r))*cos(var(--a));
+  mask:
+    radial-gradient(var(--_r) calc(var(--p) + var(--_d)) var(--_m)),
+    radial-gradient(var(--_r) calc(var(--p) - var(--_d)) var(--_m)),
+    radial-gradient(var(--s) at calc(100% + sin(var(--a))*var(--s)) var(--p),
+      #0000 100%,#000 calc(100% + 1px)) calc(var(--r)*(sin(var(--a)) - 1)) 0 no-repeat,
+    linear-gradient(#000 calc(var(--p) - var(--_d)),#0000 0 calc(var(--p) + var(--_d)),#000 0);
+}

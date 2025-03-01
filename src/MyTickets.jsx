@@ -1,6 +1,7 @@
 import React from 'react'
 import { useGlobalContext } from './Controllerr'
 import Cloudinary from './Cloudinary'
+import barCode from './assets/images/barcode.svg'
 
 const MyTickets = () => {
     const {isTicketOpen} = useGlobalContext()
@@ -23,7 +24,7 @@ const MyTickets = () => {
                     <h1 style={{marginBottom: '0.25rem', fontFamily: 'Roboto', fontWeight: '500'}}>Your Ticket is Booked!</h1>
                     <p style={{fontFamily: 'Roboto', fontWeight: '200'}}>Check your email for a copy or you can <span style={{fontWeight: '700', fontFamily: 'Roboto'}}>download</span></p>
                 </div>
-                <div className='center-text box' style={{margin: '2rem 3.5rem 0', padding: '2rem'}}>
+                <div className='center-text box' style={{margin: '2rem 3.5rem -2px', padding: '2rem'}}>
                     <div className='border-[#197686] border-1' style={{borderRadius: '1rem', marginBottom: '1rem', padding: '2rem'}}>
                         <div>
                             <h2 style={{fontFamily: 'Road Rage, serif', fontSize: '40px'}}>Techember Fest ”25</h2>
@@ -57,10 +58,35 @@ const MyTickets = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className='box2' style={{display: 'flex', justifyContent: 'center', margin: 'auto', width:'30.5rem', gap: '2.5px'}}> 
+                    <div className='inner-box inner-curve'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box'></div>
+                    <div className='inner-box inner-curve1'></div>
+                </div>
                 
-                <div className='center-text box1' style={{margin: '0 3.5rem 2rem', padding: '2rem'}}>
-                        hello
-                    </div>
+                <div className='center-text box1' style={{margin: '-2px 3.5rem 2rem', padding: '2rem'}}>
+                    <img src={barCode} alt='barcode'/>
+                </div>
                 <div className='flex justify-around items-center' style={{marginBottom: '1rem'}}>
                     <button className='btn-sub' 
                         style={{ border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo', background: 'transparent', color: '#197686'}}>
