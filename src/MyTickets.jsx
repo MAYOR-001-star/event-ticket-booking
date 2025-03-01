@@ -4,7 +4,7 @@ import Cloudinary from './Cloudinary'
 import barCode from './assets/images/barcode.svg'
 
 const MyTickets = () => {
-    const {isTicketOpen} = useGlobalContext()
+    const {isTicketOpen, openEvents} = useGlobalContext()
     return (
         isTicketOpen && (
             <div className='h-full border-[#197686] border-1' 
@@ -35,25 +35,25 @@ const MyTickets = () => {
                             <Cloudinary />
                         </div>
                         <div className="grid grid-cols-2 gap-2 border-t border-[#197686] pt-4 container">
-                            <div className="border-b border-r border-[#197686] p-2">
-                                <h3 className="text-sm text-gray-400">Enter your name</h3>
-                                <h2 className="font-bold">Avi Chukwu</h2>
+                            <div className="border-b border-r border-[#197686]" style={{padding:'1rem'}}>
+                                <h3 className="text-sm text-gray-400" style={{color: '#197686', textAlign:'start', fontFamily: 'Roboto', fontSize: '0.8rem', marginBottom: '0.7rem'}}>Enter your name</h3>
+                                <h2 className="font-bold" style={{fontFamily: 'Roboto', textAlign: 'start'}}>Avi Chukwu</h2>
                             </div>
-                            <div className="border-b border-[#197686] p-2">
-                                <h3 className="text-sm text-gray-400">Enter your email *</h3>
-                                <p className="font-semibold">User@email.com</p>
+                            <div className="border-b border-[#197686]" style={{padding:'1rem'}}>
+                                <h3 className="text-sm text-gray-400" style={{color: '#197686', textAlign:'start', fontFamily: 'Roboto', fontSize: '0.8rem', marginBottom: '0.7rem'}}>Enter your email *</h3>
+                                <p className="font-semibold" style={{fontFamily: 'Roboto', textAlign: 'start'}}>User@email.com</p>
                             </div>
-                            <div className="border-b border-r border-[#197686] p-2">
-                                <h3 className="text-sm text-gray-400">Ticket Type:</h3>
-                                <h4 className="font-semibold">VIP</h4>
+                            <div className="border-b border-r border-[#197686]" style={{padding:'1rem'}}>
+                                <h3 className="text-sm text-gray-400" style={{color: '#197686', textAlign:'start', fontFamily: 'Roboto', fontSize: '0.8rem', marginBottom: '0.7rem'}}>Ticket Type:</h3>
+                                <h4 className="font-semibold" style={{fontFamily: 'Roboto', textAlign: 'start'}}>VIP</h4>
                             </div>
-                            <div className="border-b border-[#197686] p-2">
-                                <h3 className="text-sm text-gray-400">Ticket for:</h3>
-                                <h4 className="font-semibold">1</h4>
+                            <div className="border-b border-[#197686]" style={{padding:'1rem'}}>
+                                <h3 className="text-sm text-gray-400" style={{color: '#197686', textAlign:'start', fontFamily: 'Roboto', fontSize: '0.8rem', marginBottom: '0.7rem'}}>Ticket for:</h3>
+                                <h4 className="font-semibold" style={{fontFamily: 'Roboto', textAlign: 'start'}}>1</h4>
                             </div>
-                            <div className="col-span-2 p-2">
-                                <h3 className="text-sm text-gray-400">Special request?</h3>
-                                <p className="text-sm">Nil? Or the user’s sad story they write in here gets this whole space, Max of three rows</p>
+                            <div className="col-span-2" style={{padding:'1rem'}}>
+                                <h3 className="text-sm text-gray-400" style={{color: '#197686', textAlign:'start', fontFamily: 'Roboto', fontSize: '0.8rem', marginBottom: '0.7rem'}}>Special request?</h3>
+                                <p className="text-sm" style={{fontFamily: 'Roboto', textAlign: 'start'}}>Nil? Or the user’s sad story they write in here gets this whole space, Max of three rows</p>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,8 @@ const MyTickets = () => {
                 </div>
                 <div className='flex justify-around items-center' style={{marginBottom: '1rem'}}>
                     <button className='btn-sub' 
-                        style={{ border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo', background: 'transparent', color: '#197686'}}>
+                        style={{ border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo', background: 'transparent', color: '#197686'}}
+                        onClick={() => openEvents()}>
                         Book Another Ticket
                     </button>
                     <button className='btn-sub' 

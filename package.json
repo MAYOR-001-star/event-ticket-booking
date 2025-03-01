@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@syncfusion/ej2-react-barcode-generator": "^28.2.7",
     "@tailwindcss/vite": "^4.0.6",
     "react": "^19.0.0",
+    "react-barcode": "^1.5.3",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0"
   },

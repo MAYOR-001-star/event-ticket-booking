@@ -162,6 +162,7 @@ input:-webkit-autofill:active {
   border-left: 1px solid #197686;
   border-right: 1px solid #197686;
   border-radius: 8px;
+  margin-top: 1rem;
 }
 
 .box { 
