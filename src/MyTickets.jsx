@@ -87,7 +87,7 @@ const MyTickets = () => {
                 <div className='center-text box1' style={{margin: '-2px 3.5rem 2rem', padding: '2rem'}}>
                     <img src={barCode} alt='barcode'/>
                 </div>
-                <div className='flex justify-around items-center' style={{marginBottom: '1rem'}}>
+                <div className='flex justify-around items-center' style={{marginBottom: '3rem'}}>
                     <button className='btn-sub' 
                         style={{ border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo', background: 'transparent', color: '#197686'}}
                         onClick={() => openEvents()}>

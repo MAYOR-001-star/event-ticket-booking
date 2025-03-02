@@ -184,7 +184,7 @@ input:-webkit-autofill:active {
 
 .box1 { 
   position: relative;
-  --size: 35px; /* Define the variable */
+  --size: 35px; 
   --mask:
     radial-gradient(var(--size) at var(--size) var(--size), #0000 calc(98% - 1px), #000 calc(100% - 1px) 98%, #0000) calc(-1 * var(--size)) calc(-1 * var(--size)),
     linear-gradient(90deg, #000 2px, #0000 0) -1px 50% / 100% calc(100% - (2 * var(--size)) + 1px) repeat-x,
@@ -230,14 +230,12 @@ box2 {
 }
 
 
-/* HTML: <div class="stamp"></div> */
-/* HTML: <div class="curved-rectangle"></div> */
-/* HTML: <div class="inner-curve"></div> */
+
 .inner-curve {
-  --r: 30px;  /* control the rounded part */
-  --s: 40px;  /* control the size of the cut */
-  --a: 20deg; /* control the depth of the curvature */
-  --p: 50%;   /* control the position */
+  --r: 30px;  
+  --s: 40px; 
+  --a: 20deg;
+  --p: 50%;
 
   width: 60px;
   aspect-ratio: 2/3;
@@ -254,12 +252,11 @@ box2 {
 }
 
 
-/* HTML: <div class="inner-curve"></div> */
 .inner-curve1 {
-  --r: 30px;  /* control the rounded part */
-  --s: 40px;  /* control the size of the cut */
-  --a: 20deg; /* control the depth of the curvature */
-  --p: 50%;   /* control the position */
+  --r: 30px; 
+  --s: 40px;  
+  --a: 20deg;
+  --p: 50%; 
 
   width: 60px;
   aspect-ratio: 2/3;
