@@ -13,16 +13,31 @@ const EventSection = () => {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // Prevent the default form submission
+        e.preventDefault(); // Prevent default form submission
+
+        const storedImage = sessionStorage.getItem("storedImage"); // Check for image
+
+        if (!storedImage) {
+            alert("Please upload your image.");
+            return;
+        }
+
         if (formData.name && formData.email) {
-            // Store user data in localStorage
-            localStorage.setItem("userData", JSON.stringify(formData));
+            // Ensure textarea has a default value if empty
+            const userData = {
+                name: formData.name,
+                email: formData.email,
+                textarea: formData.textarea.trim() || "" // Store empty string if no value
+            };
+
+            // Store user data in sessionStorage
+            sessionStorage.setItem("userData", JSON.stringify(userData));
 
             // Call openTicket from global context
             openTicket();
 
-            console.log("Form Submitted:", formData); // Keep this for debugging
-            setErrorMessage(""); // Clear any previous error messages
+            console.log("Form Submitted:", userData); // Debugging
+            setErrorMessage(""); // Clear previous error messages
         } else {
             setErrorMessage("Please fill in required fields.");
         }
@@ -31,7 +46,7 @@ const EventSection = () => {
     const handleCancel = () => {
         setFormData({ name: "", email: "", textarea: "" });
         setErrorMessage("");
-        openEvents()
+        openEvents();
     };
 
     return (

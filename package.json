@@ -12,6 +12,8 @@
   "dependencies": {
     "@syncfusion/ej2-react-barcode-generator": "^28.2.7",
     "@tailwindcss/vite": "^4.0.6",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.0",
     "react": "^19.0.0",
     "react-barcode": "^1.5.3",
     "react-dom": "^19.0.0",

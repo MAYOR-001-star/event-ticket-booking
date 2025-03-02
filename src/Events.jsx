@@ -3,18 +3,36 @@ import { useGlobalContext } from './Controllerr';
 
 const Events = () => {
     const { isEventsOpen, openEventSection } = useGlobalContext();
-    const [bgChecker, setBgChecker] = useState("");
+    const [bgChecker, setBgChecker] = useState(sessionStorage.getItem("ticketType") || "Regular Access");
+    const [numTickets, setNumTickets] = useState(sessionStorage.getItem("numTickets") || "");
+    const [warning, setWarning] = useState("");
 
     const checker = (event) => {
         const clickedText = event.currentTarget.querySelector(".package").textContent;
 
         if (clickedText !== bgChecker) {
             setBgChecker(clickedText);
+            sessionStorage.setItem("ticketType", clickedText);
+        }
+    };
+
+    const handleTicketChange = (event) => {
+        const value = event.target.value;
+        setNumTickets(value);
+        sessionStorage.setItem("numTickets", value);
+    };
+
+    const handleNext = () => {
+        if (!sessionStorage.getItem("ticketType") || !sessionStorage.getItem("numTickets")) {
+            setWarning("Please select a ticket type and the number of tickets before proceeding.");
+        } else {
+            setWarning("");
+            openEventSection();
         }
     };
 
     useEffect(() => {
-        setBgChecker("Regular Access");
+        sessionStorage.setItem("ticketType", "Regular Access");
     }, []);
 
     return (
@@ -34,7 +52,7 @@ const Events = () => {
 
                 <div className='border-[#197686] border-1 center-text' style={{borderRadius: '2rem', margin: '2rem 3.5rem', padding: '2rem'}}>
                     <div className='border-[#197686] border-1' style={{borderRadius: '1rem', marginBottom: '1rem', padding: '2rem'}}>
-                        <h2 style={{fontFamily: 'Road Rage, serif', fontSize: '62px', marginBottom: '1rem'}}>Techember Fest ”25</h2>
+                        <h2 style={{fontFamily: 'Road Rage, serif', fontSize: '62px', marginBottom: '1rem'}}>Techember Fest ’25</h2>
                         <p style={{fontFamily: 'Roboto', fontSize: '0.9rem'}}>Join us for an unforgettable experience at</p>
                         <p style={{fontFamily: 'Roboto', margin: '0.35rem 0', fontSize: '0.9rem'}}>[Event Name]! Secure your spot now.</p>
                         <p style={{fontFamily: 'Roboto', fontSize: '0.9rem'}}>📍 [Event Location] <span>| |</span> March 15, 2025 | 7:00 PM</p>
@@ -57,7 +75,6 @@ const Events = () => {
                                         backgroundColor: bgChecker === type ? "#12464E" : "transparent"
                                     }}
                                     onClick={checker}
-                                    // className={type === "Regular Access" ? "first-package" : ""}
                                 >
                                     <p style={{fontWeight: '800', fontFamily: 'Roboto', fontSize: '20px'}}>
                                         {type === "Regular Access" ? "Free" : "$150"}
@@ -73,7 +90,8 @@ const Events = () => {
 
                     <div style={{margin: '2rem 0'}}>
                         <label htmlFor="options" style={{textAlign: 'left', fontFamily: 'Roboto'}} className='flex'>Number of Tickets</label><br/>
-                        <select id="options" className='w-full' style={{cursor: 'pointer', outline: 'none', background: 'transparent', color: 'white', fontFamily: 'Roboto', padding: '1rem', borderRadius: '0.8rem', border: '2.5px groove #197686'}}>
+                        <select id="options" className='w-full' value={numTickets} onChange={handleTicketChange} 
+                            style={{cursor: 'pointer', outline: 'none', background: 'transparent', color: 'white', fontFamily: 'Roboto', padding: '1rem', borderRadius: '0.8rem', border: '2.5px groove #197686'}}>
                             <option value="" style={{fontFamily: 'Roboto', color: 'white', background: '#02191D'}}>Select...</option>
                             <option value="1" style={{fontFamily: 'Roboto', color: 'white', background: '#02191D'}}>1</option>
                             <option value="2" style={{fontFamily: 'Roboto', color: 'white', background: '#02191D'}}>2</option>
@@ -81,12 +99,14 @@ const Events = () => {
                         </select>
                     </div>
 
+                    {warning && <p style={{color: 'red', fontFamily: 'Roboto', textAlign: 'center', margin: '1rem 0'}}>{warning}</p>}
+
                     <div className='flex justify-around items-center' style={{marginBottom: '1rem'}}>
                         <button className='btn-sub' 
                             style={{ border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo'}}>
                             Cancel
                         </button>
-                        <button onClick={openEventSection} className='btn-sub' 
+                        <button onClick={handleNext} className='btn-sub' 
                             style={{border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo', background: '#24A0B5', color: 'white'}}>
                             Next
                         </button>
