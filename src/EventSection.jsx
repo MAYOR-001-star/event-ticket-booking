@@ -15,12 +15,13 @@ const EventSection = () => {
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevent default form submission
 
-        const storedImage = sessionStorage.getItem("storedImage"); // Check for image
-
-        if (!storedImage) {
+        const storedImage = sessionStorage.getItem("storedImage");
+        
+        if (!storedImage || storedImage === "null") {
             alert("Please upload your image.");
             return;
         }
+
 
         if (formData.name && formData.email) {
             // Ensure textarea has a default value if empty
