@@ -186,6 +186,33 @@ const MyTickets = () => {
             </div>
             </div>
 
+
+            <div className='box2' style={{ display: 'flex', justifyContent: 'center', margin: 'auto', width: '30.5rem', gap: '2.5px' }}> 
+                <div className='inner-box inner-curve'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box'></div>
+                <div className='inner-box inner-curve1'></div>
+            </div>
+            
             {/* Barcode */}
             <div
             className="center-text box1"
