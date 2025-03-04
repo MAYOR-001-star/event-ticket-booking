@@ -50,12 +50,12 @@ const Events = () => {
                     </div>
                 </div>
 
-                <div className='border-[#197686] border-1 center-text first-container' style={{borderRadius: '2rem', margin: '2rem 3.5rem', padding: '2rem'}}>
-                    <div className='border-[#197686] border-1' style={{borderRadius: '1rem', marginBottom: '1rem', padding: '2rem'}}>
-                        <h2 style={{fontFamily: 'Road Rage, serif', fontSize: '62px', marginBottom: '1rem'}}>Techember Fest ’25</h2>
-                        <p style={{fontFamily: 'Roboto', fontSize: '0.9rem'}}>Join us for an unforgettable experience at</p>
-                        <p style={{fontFamily: 'Roboto', margin: '0.35rem 0', fontSize: '0.9rem'}}>[Event Name]! Secure your spot now.</p>
-                        <p style={{fontFamily: 'Roboto', fontSize: '0.9rem'}}>📍 [Event Location] <span>| |</span> March 15, 2025 | 7:00 PM</p>
+                <div className='border-[#197686] border-1 center-text first-container' style={{borderRadius: '2rem'}}>
+                    <div className='border-[#197686] border-1 event-container' style={{borderRadius: '1rem', marginBottom: '1rem'}}>
+                        <h2 style={{fontFamily: 'Road Rage, serif', marginBottom: '1rem'}} className='fest'>Techember Fest ’25</h2>
+                        <p style={{fontFamily: 'Roboto'}} className='fest-text'>Join us for an unforgettable experience at</p>
+                        <p style={{fontFamily: 'Roboto', margin: '0.35rem 0'}} className='fest-text'>[Event Name]! Secure your spot now.</p>
+                        <p style={{fontFamily: 'Roboto'}} className='fest-text'>📍 [Event Location] <span>| |</span> March 15, 2025 | 7:00 PM</p>
                     </div>
 
                     <div className="progress-container1"></div>
@@ -70,10 +70,10 @@ const Events = () => {
                                         border: '2.5px groove #197686',
                                         borderRadius: '0.8rem',
                                         padding: '0.6rem',
-                                        width: '5.5rem',
                                         cursor: 'pointer',
                                         backgroundColor: bgChecker === type ? "#12464E" : "transparent"
                                     }}
+                                    className='type-button'
                                     onClick={checker}
                                 >
                                     <p style={{fontWeight: '800', fontFamily: 'Roboto', fontSize: '20px'}}>
@@ -101,13 +101,13 @@ const Events = () => {
 
                     {warning && <p style={{color: 'red', fontFamily: 'Roboto', textAlign: 'center', margin: '1rem 0'}}>{warning}</p>}
 
-                    <div className='flex justify-around items-center' style={{marginBottom: '1rem'}}>
+                    <div className='flex justify-around items-center sub-btns' style={{marginBottom: '1rem'}}>
                         <button className='btn-sub' 
-                            style={{ border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo'}}>
+                            style={{ border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo', backgroundColor: 'transparent', color: '#24A0B5' }}>
                             Cancel
                         </button>
                         <button onClick={handleNext} className='btn-sub' 
-                            style={{border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo', background: '#24A0B5', color: 'white'}}>
+                            style={{border: '2.5px groove #197686', borderRadius: '0.8rem', fontFamily: 'JejuMyeongjo', backgroundColor: '#24A0B5', color: 'white'}}>
                             Next
                         </button>
                     </div>

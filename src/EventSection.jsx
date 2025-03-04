@@ -52,14 +52,12 @@ const EventSection = () => {
 
     return (
         isEventSectionOpen && (
-            <div
-                className="h-full border-[#197686] border-1"
-                style={{ color: "white", margin: "4rem auto 0", borderRadius: "2rem", maxWidth: "35.7rem" }}
-            >
+            <div className='h-full border-[#197686] border-1 event' 
+                style={{color: 'white', borderRadius: '2rem'}}>
                 {/* Header Section */}
                 <div>
-                    <div className="flex justify-between items-center" style={{ padding: "2.5rem 2.5rem 0.5rem 2.5rem" }}>
-                        <h1 className="font-normal" style={{ fontWeight: "400" }}>
+                    <div className='flex justify-between items-center ticket-header'>
+                        <h1 className="font-normal ticket" style={{ fontWeight: "400" }}>
                             Attendee Details
                         </h1>
                         <p className="font-roboto" style={{ fontFamily: "Roboto", fontSize: "0.85rem" }}>
