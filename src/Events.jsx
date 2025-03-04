@@ -37,20 +37,20 @@ const Events = () => {
 
     return (
         isEventsOpen && (
-            <div className='h-full border-[#197686] border-1' 
-                style={{color: 'white', margin: '4rem auto 0', borderRadius: '2rem', maxWidth: '35.7rem'}}>
+            <div className='h-full border-[#197686] border-1 event' 
+                style={{color: 'white', borderRadius: '2rem'}}>
                 
                 <div>
-                    <div className='flex justify-between items-center' style={{padding: '2.5rem 2.5rem 0.5rem 2.5rem'}}>
-                        <h1 className='font-normal' style={{fontWeight: '400'}}>Ticket Selection</h1>
+                    <div className='flex justify-between items-center ticket-header'>
+                        <h1 className='font-normal ticket' style={{fontWeight: '400'}}>Ticket Selection</h1>
                         <p className='font-roboto' style={{fontFamily: 'Roboto', fontSize: '0.85rem'}}>Step 1/3</p>
                     </div>
-                    <div className="progress-container" style={{maxWidth: '30rem', margin: '0.5rem auto'}}>
+                    <div className="progress-container">
                         <div className="progress-bar" id="progressBar"></div>
                     </div>
                 </div>
 
-                <div className='border-[#197686] border-1 center-text' style={{borderRadius: '2rem', margin: '2rem 3.5rem', padding: '2rem'}}>
+                <div className='border-[#197686] border-1 center-text first-container' style={{borderRadius: '2rem', margin: '2rem 3.5rem', padding: '2rem'}}>
                     <div className='border-[#197686] border-1' style={{borderRadius: '1rem', marginBottom: '1rem', padding: '2rem'}}>
                         <h2 style={{fontFamily: 'Road Rage, serif', fontSize: '62px', marginBottom: '1rem'}}>Techember Fest ’25</h2>
                         <p style={{fontFamily: 'Roboto', fontSize: '0.9rem'}}>Join us for an unforgettable experience at</p>
@@ -58,7 +58,7 @@ const Events = () => {
                         <p style={{fontFamily: 'Roboto', fontSize: '0.9rem'}}>📍 [Event Location] <span>| |</span> March 15, 2025 | 7:00 PM</p>
                     </div>
 
-                    <div className="progress-container" style={{maxWidth: '37rem', margin: '2rem auto 0 auto'}}></div>
+                    <div className="progress-container1"></div>
 
                     <div>
                         <h2 className='text-left' style={{fontFamily: 'Roboto', fontSize: '0.9rem', margin: '2rem 0 1rem 0', fontWeight: '400'}}>Select your ticket:</h2>
