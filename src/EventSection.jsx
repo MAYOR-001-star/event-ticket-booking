@@ -64,27 +64,24 @@ const EventSection = () => {
                             Step 2/3
                         </p>
                     </div>
-                    <div className="progress-container1" style={{ maxWidth: "30rem", margin: "0.5rem auto" }}>
+                    <div className="progress-container">
                         <div className="progress-bar1" id="progressBar"></div>
                     </div>
                 </div>
 
                 {/* Form Section */}
-                <div
-                    className="border-[#197686] border-1"
-                    style={{ borderRadius: "2rem", margin: "2rem 3.5rem", padding: "2rem" }}
-                >
+                <div className="border-[#197686] border-1 second-container">
                     <div
-                        className="border-[#197686] border-1"
-                        style={{ borderRadius: "1rem", marginBottom: "1rem", padding: "2rem" }}
+                        className="border-[#197686] border-1 photo"
+                        style={{ borderRadius: "1rem", marginBottom: "1rem" }}
                     >
-                        <h1 style={{color: 'white', fontSize: '0.8rem', marginBottom: '3rem', fontFamily: 'Roboto'}}>Upload Profile Photo</h1>
+                        <h1 className="photo-upload" style={{color: 'white', fontSize: '0.8rem', fontFamily: 'Roboto'}}>Upload Profile Photo</h1>
                         <div className="h-[160px] opacityyy">
                             <CloudinaryAssist />
                         </div>
                     </div>
 
-                    <div className="progress-container1" style={{ maxWidth: "37rem", margin: "2rem auto 0 auto" }}></div>
+                    <div className="progress-container1"></div>
 
                     {/* Form Start */}
                     <form onSubmit={handleSubmit}>
@@ -142,7 +139,7 @@ const EventSection = () => {
                         )}
 
                         {/* Buttons */}
-                        <div className="flex justify-around items-center" style={{ marginBottom: "1rem", gap: "1rem" }}>
+                        <div className="flex justify-around items-center sub-btns" style={{ gap: "1rem", marginBottom: "0.5rem" }}>
                             <button
                                 type="button"
                                 onClick={handleCancel}

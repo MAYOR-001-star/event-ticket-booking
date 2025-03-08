@@ -92,10 +92,7 @@ const MyTickets = () => {
                     }}
                 >
                     <h2
-                    style={{
-                        fontFamily: "Road Rage, serif",
-                        fontSize: "40px",
-                    }}
+                        style={{fontFamily: 'Road Rage, serif', marginBottom: '1rem'}} className='fest'
                     >
                     Techember Fest ”25
                     </h2>
@@ -222,7 +219,7 @@ const MyTickets = () => {
             </div>
 
             {/* Buttons */}
-            <div className="flex justify-around items-center" style={{ marginBottom: "3rem" }}>
+            <div className="flex justify-around items-center sub-btns" style={{ marginBottom: "3rem" }}>
             <button
                 className="btn-sub"
                 style={{
