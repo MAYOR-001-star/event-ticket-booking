@@ -42,17 +42,18 @@ const MyTickets = () => {
     return (
         isTicketOpen && (
         <div
-            className="h-full border-[#197686] border-1"
+            className="h-full border-[#197686] border-1 event"
             style={{
             color: "white",
-            margin: "4rem auto 0",
+            // margin: "4rem auto 0",
             borderRadius: "2rem",
-            maxWidth: "35.7rem",
+            // maxWidth: "35.7rem",
             }}
             ref={pdfRef}
         >
             <div style={{ marginTop: "2rem", textAlign: "center" }}>
                 <h1
+                    className="first-header"
                     style={{
                     marginBottom: "0.25rem",
                     fontFamily: "Roboto",
@@ -81,26 +82,18 @@ const MyTickets = () => {
 
             <div
                 className="center-text box"
-                style={{ margin: "2rem 3.5rem -2px", padding: "2rem" }}
             >
-                <div
-                    className="border-[#197686] border-1"
-                    style={{
-                    borderRadius: "1rem",
-                    marginBottom: "1rem",
-                    padding: "2rem",
-                    }}
-                >
+                <div className="border-[#197686] border-1 real-container">
                     <h2
-                        style={{fontFamily: 'Road Rage, serif', marginBottom: '1rem'}} className='fest'
+                        style={{fontFamily: 'Road Rage, serif', marginBottom: '1rem'}} className='fest fest-way'
                     >
                     Techember Fest ”25
                     </h2>
                     <p style={{ fontFamily: "Roboto", fontSize: "0.9rem" }}>
-                    📍 04 Rumens road, Ikoyi, Lagos
+                        📍 04 Rumens road, Ikoyi, Lagos
                     </p>
                     <p style={{ fontFamily: "Roboto", fontSize: "0.9rem" }}>
-                    📅 March 15, 2025 | 7:00 PM
+                        📅 March 15, 2025 | 7:00 PM
                     </p>
 
                     {/* Cloudinary Image */}
@@ -213,7 +206,6 @@ const MyTickets = () => {
             {/* Barcode */}
             <div
             className="center-text box1"
-            style={{ margin: "-2px 3.5rem 2rem", padding: "2rem" }}
             >
             <img src={barCode} alt="barcode" />
             </div>

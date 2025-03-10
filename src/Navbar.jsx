@@ -19,10 +19,21 @@ const Navbar = () => {
     setFocusedButton(null);
   };
 
+  const handleTicketClick = () => {
+    const storedImage = sessionStorage.getItem("storedImage");
+    const userdata = sessionStorage.getItem("userdata");
+    
+    if (storedImage && userdata) {
+      openTicket();
+    }else {
+      alert("Missing required data. Please ensure to fill forms first.");
+    }
+  };
+
   return (
     <div>
       <div className="border-[#197686] border-1 adjust w-[75rem] flex justify-between items-center mx-auto mt-4">
-        <div>
+        <div onClick={openEvents}>
           <img src={logo} alt="company-logo" />
         </div>
         <div className="flex justify-between items-center spacer nav-btns">
@@ -37,7 +48,7 @@ const Navbar = () => {
             Events
           </button>
           <button
-            onClick={openTicket}
+            onClick={handleTicketClick}
             onFocus={() => handleFocus("tickets")}
             onBlur={handleBlur}
             className={`border-0 bg-transparent text-[18px] ${
@@ -57,7 +68,7 @@ const Navbar = () => {
             About Projects
           </button>
         </div>
-        <div className="flex justify-between items-center spacer-1 bg-red-500 rounded">
+        <div className="flex justify-between items-center spacer-1 bg-red-500 rounded" onClick={handleTicketClick}>
           <button className="text-[#0A0C11] border-0 bg-transparent text-[18px]">
             My Tickets
           </button>
