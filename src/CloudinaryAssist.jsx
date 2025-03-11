@@ -32,7 +32,7 @@ function CloudinaryAssist() {
                 onChange={handleImageChange}
                 className="file-input"
                 style={{ display: "none" }} // Hide input but keep it functional
-            /> 
+            />
             {image && <img src={image} alt="Uploaded Preview" className="uploaded-image" />}
         </div>
     );
