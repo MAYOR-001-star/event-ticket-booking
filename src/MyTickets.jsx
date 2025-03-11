@@ -36,9 +36,6 @@ const MyTickets = () => {
         }, 500);
     };
 
-
-
-
     return (
         isTicketOpen && (
         <div

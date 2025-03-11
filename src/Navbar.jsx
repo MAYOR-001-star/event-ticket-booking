@@ -21,12 +21,16 @@ const Navbar = () => {
 
   const handleTicketClick = () => {
     const storedImage = sessionStorage.getItem("storedImage");
-    const userdata = sessionStorage.getItem("userdata");
+    console.log(storedImage);
     
-    if (storedImage && userdata) {
-      openTicket();
-    }else {
+    const userdata = sessionStorage.getItem("userdata");
+    console.log(userdata);
+    
+    
+    if (!storedImage || !userdata) {
       alert("Missing required data. Please ensure to fill forms first.");
+    }else {
+      openTicket();
     }
   };
 
