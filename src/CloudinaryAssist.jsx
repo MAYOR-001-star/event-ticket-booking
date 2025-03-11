@@ -33,7 +33,7 @@ function CloudinaryAssist() {
                 className="file-input"
                 style={{ display: "none" }} // Hide input but keep it functional
             /> 
-            {image && <img src={image} alt="Uploaded Preview" width="200px" className="uploaded-image" />}
+            {image && <img src={image} alt="Uploaded Preview" width="200px" height="400px" className="uploaded-image" />}
         </div>
     );
 }
